@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebAPI_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Schools">
+    <Key>
+      <PropertyRef Name="RawID" />
+    </Key>
+    <Property Name="SchoolID" Type="nvarchar" MaxLength="255" />
+    <Property Name="School_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="City" Type="nvarchar" MaxLength="255" />
+    <Property Name="Directorate" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lat" Type="nvarchar" MaxLength="255" />
+    <Property Name="Long" Type="nvarchar" MaxLength="255" />
+    <Property Name="RawID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="WebAPI_DBModelStoreContainer">
+    <EntitySet Name="Schools" EntityType="Self.Schools" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
